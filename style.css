@@ -439,7 +439,8 @@ p {
 
 .contact__title,
 .contact__email,
-.contact__links {
+.contact__links,
+.contact__rights {
   color: var(--color-white);
 }
 
@@ -458,5 +459,5 @@ p {
 
 .contact__links i:hover {
   transform: scale(1.1);
-  color: var(--color-black);
+  color: var(--color-yellow);
 }
