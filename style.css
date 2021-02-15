@@ -356,9 +356,11 @@ p {
 }
 
 .work__projects {
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: auto;
 }
 
 .project {
@@ -370,6 +372,10 @@ p {
   width: 280px;
   height: 250px;
   background-color: var(--color-light-white);
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {

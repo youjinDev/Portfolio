@@ -51,6 +51,32 @@ arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
 });
 
+// filtering work projects
+const categoryBtn = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project'); //프로젝트들을 배열로 받아옴
+
+categoryBtn.addEventListener('click', (event) => {
+    // data-filter 값 받아오기
+    // 숫자를 누르면 dataset 값이 없으므로 부모 노드의 dataset 값을 받아온다
+    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+
+    // category filtering
+    projects.forEach((project) => {
+        console.log(project.dataset.category);
+        if (filter==='*' || filter === project.dataset.category) {
+            project.classList.remove('invisible');
+        } else {
+            project.classList.add('invisible');
+        }
+
+    });
+});
+
+
 // function
     function scrollIntoView(selector) {
         const scrollTo = document.querySelector(selector);
