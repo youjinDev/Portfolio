@@ -14,6 +14,7 @@ document.addEventListener('scroll', () => {
 
 // handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
+const navbarMenuItem = document.querySelectorAll('.navbar__menu__item')
 navbarMenu.addEventListener('click', (event) => {
     
     const target = event.target;
@@ -64,6 +65,12 @@ categoryBtn.addEventListener('click', (event) => {
         return;
     }
 
+    // remove selection from the prvious item and select the current item
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected'); // remove current selected
+    const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+    target.classList.add('selected');
+
     // category filtering
     projects.forEach((project) => {
         console.log(project.dataset.category);
@@ -72,8 +79,11 @@ categoryBtn.addEventListener('click', (event) => {
         } else {
             project.classList.add('invisible');
         }
-
     });
+
+
+
+
 });
 
 
