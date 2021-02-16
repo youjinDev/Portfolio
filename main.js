@@ -71,19 +71,21 @@ categoryBtn.addEventListener('click', (event) => {
     const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
     target.classList.add('selected');
 
-    // category filtering
-    projects.forEach((project) => {
-        console.log(project.dataset.category);
-        if (filter==='*' || filter === project.dataset.category) {
-            project.classList.remove('invisible');
-        } else {
-            project.classList.add('invisible');
-        }
-    });
+    // add animate
+    projectContainer.classList.add('anim-out');
 
-
-
-
+    setTimeout(() => {
+        // category filtering
+        projects.forEach((project) => {
+            console.log(project.dataset.category);
+            if (filter==='*' || filter === project.dataset.category) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('anim-out');
+    }, 300);
 });
 
 
