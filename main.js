@@ -23,6 +23,14 @@ navbarMenu.addEventListener('click', (event) => {
         return;
     }
     scrollIntoView(link);
+    navbarMenu.classList.remove('open');
+});
+
+// Toggle button
+const toggleBtn = document.querySelector('.navbar__toggle-btn');
+toggleBtn.addEventListener('click', () => {
+    console.log('click');
+navbarMenu.classList.toggle('open');
 });
 
 // scoll to contact when click on "contact me"
