@@ -128,23 +128,24 @@ categoryBtn.addEventListener('click', (event) => {
 
     const observerCallback = (entries, observer) => {
         entries.forEach(entry => {
-            if (!entry.isIntersecting && entry.intersectionRatio > 0) { // 나갈때
+            if (!entry.isIntersecting && entry.intersectionRatio > 0) { // 나갈때, 현재 화면에 조금이라도 들어와있는 section에만 callback함수 부르게
                 console.log(entry);
                 const index = sectionIds.indexOf(`#${entry.target.id}`);
-                // console.log(index, entry.target.id);
+
                 let selectedIndex;
                 if (entry.boundingClientRect.y < 0) {
                     selectedIndex = index + 1;
                 } else {
-                    selectedIndex = index - 1;
                     console.log(index);
+                    selectedIndex = index - 1;
+                    console.log(`y좌표 양수일때 ${selectedIndex}`);
                 }
                 selectedNavItem.classList.remove('active');
-                console.log(`삭제된 인덱스는 ${index}`);
+                console.log(`인덱스는 ${index}`);
                 selectedNavItem = navItems[selectedIndex];
                 
                 selectedNavItem.classList.add('active');
-                console.log(`삽입된 인덱스는 ${selectedIndex}`);
+                console.log(`삽입된 selectedIndex는 ${selectedIndex}`);    //여기에서 index=5 일때 selectedIndex = 4로 
             }
         });
     };
