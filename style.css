@@ -1,9 +1,9 @@
+/* Global */
+
 .icon {
   width: 16px;
   height: 16px;
 }
-
-/* Global */
 
 :root {
   /* Color */
@@ -131,6 +131,12 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-dark-pink);
+}
+
 .navbar__menu__item:hover {
   border: 1px solid var(--color-white);
   border-radius: var(--size-border-radius);
@@ -183,7 +189,7 @@ p {
 /* Section Common */
 
 .section {
-  padding: 50px;
+  padding: 80px;
   text-align: center;
   margin: auto;
 }
