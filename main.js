@@ -3,8 +3,8 @@
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-    console.log(window.scrollY);
-    console.log(`navbarHeight: ${navbarHeight}`);
+    // console.log(window.scrollY);
+    // console.log(`navbarHeight: ${navbarHeight}`);
     if(window.scrollY > navbarHeight) {
         navbar.classList.add('navbar--dark');
     } else {
@@ -117,9 +117,9 @@ categoryBtn.addEventListener('click', (event) => {
     ];
 
     const sections = sectionIds.map(id => document.querySelector(id));
-    console.log(sections);
     const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
 
+    let selectedNavItem = navItems[0];
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -128,8 +128,26 @@ categoryBtn.addEventListener('click', (event) => {
 
     const observerCallback = (entries, observer) => {
         entries.forEach(entry => {
-            console.log('clear!');
+            if (!entry.isIntersecting && entry.intersectionRatio > 0) { // 나갈때
+                console.log(entry);
+                const index = sectionIds.indexOf(`#${entry.target.id}`);
+                // console.log(index, entry.target.id);
+                let selectedIndex;
+                if (entry.boundingClientRect.y < 0) {
+                    selectedIndex = index + 1;
+                } else {
+                    selectedIndex = index - 1;
+                    console.log(index);
+                }
+                selectedNavItem.classList.remove('active');
+                console.log(`삭제된 인덱스는 ${index}`);
+                selectedNavItem = navItems[selectedIndex];
+                
+                selectedNavItem.classList.add('active');
+                console.log(`삽입된 인덱스는 ${selectedIndex}`);
+            }
         });
     };
+
     const observer = new IntersectionObserver(observerCallback, observerOptions);
     sections.forEach(section => observer.observe(section));
