@@ -182,7 +182,7 @@ p {
 }
 
 .home__contact:hover {
-  background-color: var(--color-dark-purple);
+  background-color: var(--color-orange);
 }
 
 /* Section Common */
@@ -261,6 +261,25 @@ p {
 
 .school__major {
   font-size: var(--font-micro);
+}
+
+.about__study {
+  background-color: var(--color-light-purple);
+  padding: 50px;
+  margin-top: 50px;
+}
+
+.study {
+  color: var(--color-black);
+}
+
+.this {
+  color: var(--color-dark-purple);
+  text-decoration: underline;
+}
+
+.this:hover {
+  color: var(--color-orange);
 }
 
 /* Skills */
