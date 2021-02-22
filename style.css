@@ -13,12 +13,9 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  /* --color-pink: #fe918d;
-  --color-dark-pink: #ff6863; */
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-blue: #73aace;
   --color-orange: #feb546;
   --color-black: #000000;
 
@@ -306,7 +303,7 @@ p {
 
 .skill__value {
   height: 5px;
-  background-color: var(--color-light-purple);
+  background-color: var(--color-purple);
 }
 
 .skill {
