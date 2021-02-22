@@ -118,8 +118,16 @@ categoryBtn.addEventListener('click', (event) => {
 
     const sections = sectionIds.map(id => document.querySelector(id));
     const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
-
+   
+    let selectedNavIndex;
     let selectedNavItem = navItems[0];
+
+    function selectNavItem(selected) {
+        selectedNavItem.classList.remove('active');
+        selectedNavItem = selected;
+        selectedNavItem.classList.add('active');
+    }
+
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -131,24 +139,27 @@ categoryBtn.addEventListener('click', (event) => {
             if (!entry.isIntersecting && entry.intersectionRatio > 0) { // 나갈때, 현재 화면에 조금이라도 들어와있는 section에만 callback함수 부르게
                 console.log(entry);
                 const index = sectionIds.indexOf(`#${entry.target.id}`);
-
-                let selectedIndex;
-                if (entry.boundingClientRect.y < 0) {
-                    selectedIndex = index + 1;
-                } else {
-                    console.log(index);
-                    selectedIndex = index - 1;
-                    console.log(`y좌표 양수일때 ${selectedIndex}`);
+                if (entry.boundingClientRect.y < 0) { // 스크롤이 아래로 내려갈때
+                    selectedNavIndex = index + 1;
+                    console.log('스크롤 아래로');
+                } else { // 스크롤이 위로 올라갈때
+                    // console.log(index);
+                    selectedNavIndex = index - 1;
+                    // console.log(`y좌표 양수일때 ${selectedIndex}`);
                 }
-                selectedNavItem.classList.remove('active');
-                console.log(`인덱스는 ${index}`);
-                selectedNavItem = navItems[selectedIndex];
-                
-                selectedNavItem.classList.add('active');
-                console.log(`삽입된 selectedIndex는 ${selectedIndex}`);    //여기에서 index=5 일때 selectedIndex = 4로 
             }
         });
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
     sections.forEach(section => observer.observe(section));
+
+// window scrolling
+window.addEventListener('scroll', () => {
+    if (window.scrollY === 0) {
+        selectedNavIndex = 0;
+    } else if (window.scrollY + window.innerHeight === document.body.clientHeight) {
+        selectedNavIndex = navItems.length - 1;
+    }
+    selectNavItem(navItems[selectedNavIndex]);
+});
