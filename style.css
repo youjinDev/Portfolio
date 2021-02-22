@@ -7,16 +7,18 @@
 
 :root {
   /* Color */
+  --color-dark-purple: #4a148c;
+  --color-purple: #b388ff;
+  --color-light-purple: #ede7f6;
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-pink: #fe918d;
-  --color-dark-pink: #ff6863;
+  /* --color-pink: #fe918d;
+  --color-dark-pink: #ff6863; */
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
-  --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
 
@@ -110,7 +112,7 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-pink);
+  background-color: var(--color-purple);
   transition: all var(--animation-duration) ease-in-out;
 }
 
@@ -134,13 +136,13 @@ p {
 .navbar__menu__item.active {
   border: 1px solid var(--color-white);
   border-radius: var(--size-border-radius);
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-purple);
 }
 
 .navbar__menu__item:hover {
   border: 1px solid var(--color-white);
   border-radius: var(--size-border-radius);
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-purple);
 }
 
 .navbar__toggle-btn {
@@ -183,7 +185,7 @@ p {
 }
 
 .home__contact:hover {
-  background-color: var(--color-orange);
+  background-color: var(--color-dark-purple);
 }
 
 /* Section Common */
@@ -212,8 +214,8 @@ p {
   font-size: 70px;
   line-height: 170px;
   margin: auto;
-  border: 1px solid var(--color-blue);
-  color: var(--color-blue);
+  border: 1px solid var(--color-dark-purple);
+  color: var(--color-purple);
   border-radius: 50%;
   margin-bottom: 15px;
 }
@@ -223,7 +225,7 @@ p {
 }
 
 .major__icon:hover i {
-  color: var(--color-pink);
+  color: var(--color-dark-purple);
   transform: rotate(30deg) scale(1.1);
 }
 
@@ -267,7 +269,7 @@ p {
 /* Skills */
 
 #skills {
-  background-color: var(--color-yellow);
+  background-color: var(--color-light-purple);
 }
 
 .skillset {
@@ -304,7 +306,7 @@ p {
 
 .skill__value {
   height: 5px;
-  background-color: var(--color-orange);
+  background-color: var(--color-light-purple);
 }
 
 .skill {
@@ -337,7 +339,7 @@ p {
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-purple);
   color: var(--color-white);
 }
 
@@ -348,7 +350,7 @@ p {
 }
 
 .category__count {
-  background-color: var(--color-orange);
+  background-color: var(--color-dark-purple);
   border-radius: 50%;
   color: var(--color-white);
   width: 24px;
@@ -472,12 +474,12 @@ p {
 }
 
 .testimonial__speech-bubble .name {
-  color: var(--color-pink);
+  color: var(--color-purple);
 }
 
 /* Contact */
 #contact {
-  background-color: var(--color-pink);
+  background-color: var(--color-purple);
 }
 
 .contact__title,
@@ -502,7 +504,7 @@ p {
 
 .contact__links i:hover {
   transform: scale(1.1);
-  color: var(--color-yellow);
+  color: var(--color-dark-purple);
 }
 
 /* Scroll */
@@ -514,7 +516,7 @@ p {
   height: 70px;
   font-size: 50px;
   color: var(--color-white);
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-purple);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
@@ -546,7 +548,7 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    background-color: var(--color-purple);
   }
 
   #navbar.navbar--dark {

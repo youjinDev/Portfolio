@@ -24,6 +24,7 @@ navbarMenu.addEventListener('click', (event) => {
     }
     scrollIntoView(link);
     navbarMenu.classList.remove('open');
+    selectNavItem(target);
 });
 
 // Toggle button
@@ -37,6 +38,7 @@ navbarMenu.classList.toggle('open');
 const contactMe = document.querySelector('.home__contact');
 contactMe.addEventListener('click', (event) => {
     scrollIntoView('#contact')
+    selectNavItem(navItems[navItems.length - 1]);
 });
 
 // make transparent home section when it scrolled
@@ -58,6 +60,7 @@ document.addEventListener('scroll', () => {
 
 arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
+    selectNavItem(navItems[0]);
 });
 
 // filtering work projects
@@ -101,6 +104,7 @@ categoryBtn.addEventListener('click', (event) => {
     function scrollIntoView(selector) {
         const scrollTo = document.querySelector(selector);
         scrollTo.scrollIntoView({behavior: "smooth"});
+        
     }
 
     // 1. 모든 섹션 요소들을 가지고 온다
@@ -155,10 +159,10 @@ categoryBtn.addEventListener('click', (event) => {
     sections.forEach(section => observer.observe(section));
 
 // window scrolling
-window.addEventListener('scroll', () => {
-    if (window.scrollY === 0) {
+window.addEventListener('wheel', () => {
+    if (window.scrollY === 0) { // top일때
         selectedNavIndex = 0;
-    } else if (window.scrollY + window.innerHeight === document.body.clientHeight) {
+    } else if ( Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight) { // bottom 일때
         selectedNavIndex = navItems.length - 1;
     }
     selectNavItem(navItems[selectedNavIndex]);
