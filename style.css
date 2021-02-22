@@ -211,10 +211,14 @@ p {
   font-size: 70px;
   line-height: 170px;
   margin: auto;
-  border: 1px solid var(--color-dark-purple);
+  border: 1px solid var(--color-purple);
   color: var(--color-purple);
   border-radius: 50%;
   margin-bottom: 15px;
+}
+
+.major__icon a {
+  color: var(--color-purple);
 }
 
 .major__icon i {
@@ -269,12 +273,8 @@ p {
   margin-top: 50px;
 }
 
-.study {
-  color: var(--color-black);
-}
-
 .this {
-  color: var(--color-dark-purple);
+  color: var(--color-dark-grey);
   text-decoration: underline;
 }
 
