@@ -157,6 +157,13 @@ p {
   padding: 40px;
   padding-top: 120px;
   text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__container {
 }
 
 .home__avatar {
