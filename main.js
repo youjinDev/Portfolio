@@ -14,9 +14,8 @@ document.addEventListener('scroll', () => {
 
 // handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
-const navbarMenuItem = document.querySelectorAll('.navbar__menu__item')
+const navbarMenuItem = document.querySelectorAll('.navbar__menu__item');
 navbarMenu.addEventListener('click', (event) => {
-    
     const target = event.target;
     const link = target.dataset.link;
     if(link==null) {
@@ -31,13 +30,13 @@ navbarMenu.addEventListener('click', (event) => {
 const toggleBtn = document.querySelector('.navbar__toggle-btn');
 toggleBtn.addEventListener('click', () => {
     console.log('click');
-navbarMenu.classList.toggle('open');
+    navbarMenu.classList.toggle('open');
 });
 
 // scoll to contact when click on "contact me"
 const contactMe = document.querySelector('.home__contact');
-contactMe.addEventListener('click', (event) => {
-    scrollIntoView('#contact')
+contactMe.addEventListener('click', () => {
+    scrollIntoView('#contact');
     selectNavItem(navItems[navItems.length - 1]);
 });
 
@@ -66,7 +65,7 @@ arrowUp.addEventListener('click', () => {
 // filtering work projects
 const categoryBtn = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project'); //프로젝트들을 배열로 받아옴
+const projects = document.querySelectorAll('.project'); //프로젝트들을 nodeList로 받아옴
 
 categoryBtn.addEventListener('click', (event) => {
     // data-filter 값 받아오기
@@ -122,7 +121,7 @@ categoryBtn.addEventListener('click', (event) => {
 
     const sections = sectionIds.map(id => document.querySelector(id));
     const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
-   
+    
     let selectedNavIndex;
     let selectedNavItem = navItems[0];
 
@@ -142,12 +141,13 @@ categoryBtn.addEventListener('click', (event) => {
         entries.forEach(entry => {
             if (!entry.isIntersecting && entry.intersectionRatio > 0) { // 나갈때, 현재 화면에 조금이라도 들어와있는 section에만 callback함수 부르게
                 console.log(entry);
-                const index = sectionIds.indexOf(`#${entry.target.id}`);
+                const index = sectionIds.indexOf(`#${entry.target.id}`); //현재 section id의 index
                 if (entry.boundingClientRect.y < 0) { // 스크롤이 아래로 내려갈때
                     selectedNavIndex = index + 1;
-                    console.log('스크롤 아래로');
+                    console.log(entry.boundingClientRect.y);
                 } else { // 스크롤이 위로 올라갈때
                     // console.log(index);
+                    console.log(entry.boundingClientRect.y);
                     selectedNavIndex = index - 1;
                     // console.log(`y좌표 양수일때 ${selectedIndex}`);
                 }

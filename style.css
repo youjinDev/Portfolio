@@ -153,17 +153,14 @@ p {
 
 /* Home */
 #home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: url("image/homebackground.png") center/cover no-repeat;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home__container {
 }
 
 .home__avatar {
@@ -408,6 +405,7 @@ p {
   align-items: center;
   position: relative;
   margin: 2px;
+  padding: 15px;
   width: 280px;
   height: 250px;
   background-color: var(--color-light-white);
