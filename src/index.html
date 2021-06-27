@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youjin's Portfolio</title>
+    <meta name="description" content="Portfolio made by youjin" />
+    <meta name="author" content="youjin cha" />
+    <script
+      src="https://kit.fontawesome.com/8d96bbeaf9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="img/png" href="../image/icon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+  </head>
+
+  <!-- body -->
+  <body>
+    <!-- Nav Bar -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <i class="fas fa-battery-full"></i>
+        <a href="#">Youjin</a>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item active" data-link="#home">Home</li>
+        <li class="navbar__menu__item" data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#skills">Skills</li>
+        <li class="navbar__menu__item" data-link="#works">My work</li>
+        <li class="navbar__menu__item" data-link="#testimonials">
+          Testimonial
+        </li>
+        <li class="navbar__menu__item" data-link="#contact">Contact</li>
+      </ul>
+      <!-- !Toggle Button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    <!--Home-->
+    <section id="home">
+      <div class="home__container">
+        <img
+          src="../image/character.png"
+          alt="Youjin's Profile Photo"
+          class="home__avatar"
+        />
+        <h1 class="home__title">Wellcome <br />차유진입니다!</h1>
+        <h2 class="home__description">☕ ➕ 💻 = 💜</h2>
+        <button class="home__contact">Contact Me</button>
+      </div>
+    </section>
+    <!-- About me -->
+    <section id="about" class="section section__container">
+      <h1>About me</h1>
+      <p>
+        프론트엔드와 백엔드, 웹 어플리케이션 전반에 관심이 많습니다. <br />
+        현재는 프론트엔드 신입 개발자로 구직중이며, 최종적으로는 풀스택 개발자를
+        꿈꾸고 있습니다.
+      </p>
+      <div class="about__majors">
+        <div class="major">
+          <div class="major__icon">
+            <a
+              href="https://til-5z8y.additor.io/page/OZX2DZUzPzDw"
+              target="blank"
+            >
+              <i class="fab fa-html5"></i>
+            </a>
+          </div>
+          <h2 class="major__title">W3</h2>
+          <p class="major__description">HTML CSS JavaScript(ES6)</p>
+        </div>
+
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-vuejs"></i>
+          </div>
+          <h2 class="major__title">Framework</h2>
+          <p class="major__description">Vue React</p>
+        </div>
+
+        <div class="major">
+          <div class="major__icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h2 class="major__title">Mobile</h2>
+          <p class="mafor__description">Android with Java</p>
+        </div>
+      </div>
+
+      <div class="about__exp">
+        <div class="school">
+          <img src="../image/sungshin.png" alt="" class="sungshin" />
+          <div class="school__description">
+            <p class="school__name">Sungshin Women University</p>
+            <p class="school__major">2021.02 전공 컴퓨터공학과 졸업</p>
+          </div>
+        </div>
+        <div class="school">
+          <img src="../image/sungshin.png" alt="" class="sungshin" />
+          <div class="school__description">
+            <p class="school__name">Sungshin Women University</p>
+            <p class="school__major">2021.02 부전공 정보시스템공학과 졸업</p>
+          </div>
+        </div>
+        <div class="school">
+          <img src="../image/seoul_logo.png" alt="" class="seoul" />
+          <div class="school__description">
+            <p class="school__name">서울형 청년인턴 직무캠프 프로그램</p>
+            <p class="school__major">
+              2021.05~ Web 개발 직무 선발 후 교육 진행중
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="section__container">
+        <h1>Skills</h1>
+        <h3>Skiils & Attributes</h3>
+        <div class="skills__container">
+          <div class="cards__container">
+            <!--언어-->
+            <div class="card card__language">
+              <div class="card__front">
+                <i class="fas fa-code"></i>
+                <h2>Language</h2>
+              </div>
+              <div class="card__back">
+                <div class="card__back--section">
+                  <h2>JavaScript</h2>
+                  <h2>TypeScript</h2>
+                  <h2>Java</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--프레임워크-->
+          <div class="cards__container">
+            <div class="card card__framework">
+              <div class="card__front">
+                <i class="fab fa-react"></i>
+                <h2>Framework</h2>
+              </div>
+              <div class="card__back">
+                <div class="card__back--section">
+                  <h2>React</h2>
+                  <h2>Vue</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Tools-->
+          <div class="cards__container">
+            <div class="card card__tools">
+              <div class="card__front">
+                <i class="fas fa-desktop"></i>
+                <h2>Tools</h2>
+              </div>
+              <div class="card__back">
+                <div class="card__back--section">
+                  <h2>VS Code</h2>
+                  <h2>Android Studio</h2>
+                  <h2>Eclipse</h2>
+                  <h2>CodeSandBox</h2>
+                  <h2>ProtoPie</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--etc-->
+          <div class="cards__container">
+            <div class="card card__etc">
+              <div class="card__front">
+                <i class="fas fa-comment"></i>
+                <h2>Etc</h2>
+              </div>
+              <div class="card__back">
+                <div class="card__back--section">
+                  <h2>Git</h2>
+                  <h2>Github</h2>
+                  <h2>정보처리기사</h2>
+                  <h2>Presentation Skill</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Works -->
+    <section id="works" class="section">
+      <h1>Works</h1>
+      <h3>projects</h3>
+      <div class="work__categories">
+        <button class="category__btn selected" data-filter="*">
+          All<span class="category__count">3</span>
+        </button>
+        <button class="category__btn" data-filter="front">
+          Front-End<span class="category__count">2</span>
+        </button>
+        <button class="category__btn" data-filter="back">
+          Back-End<span class="category__count">0</span>
+        </button>
+        <button class="category__btn" data-filter="mobile">
+          Mobile<span class="category__count">1</span>
+        </button>
+      </div>
+      <div class="work__projects">
+        <a
+          href="https://github.com/youjinDev/Mayday"
+          class="project"
+          target="blank"
+          data-category="mobile"
+        >
+          <img class="project__img" src="../image/Projects/Mayday.png" alt="" />
+          <div class="project__description">
+            <h3>Mobile Application "Mayday"</h3>
+            <span>Java</span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/youjinDev/game_project"
+          class="project"
+          target="blank"
+          data-category="front"
+        >
+          <img
+            class="project__img"
+            src="../image/Projects/desktop_game.png"
+            alt=""
+          />
+          <div class="project__description">
+            <h3>Game</h3>
+            <span>HTML, CSS, vanilla JS</span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/youjinDev/Interaction-Web-Project"
+          class="project"
+          target="blank"
+          data-category="front"
+        >
+          <img
+            class="project__img"
+            src="../image/Projects/interactive-web.png"
+            alt=""
+          />
+          <div class="project__description">
+            <h3>Interactive Landing Page</h3>
+            <span>HTML, CSS, vanilla JS</span>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Tesimonials -->
+    <section id="testimonials" class="section">
+      <div class="section__container">
+        <h1>Tesimonials</h1>
+        <h3>See what they say about me</h3>
+        <div class="testimonials">
+          <div class="testimonial">
+            <img
+              class="testimonial__avatar"
+              src="../image/people1.jpg"
+              alt="People"
+            />
+            <div class="testimonial__speech-bubble">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                asperiores, alias aut magnam est laborum debitis consequatur
+                vero maxime, autem dolores, architecto saepe iste natus. Cum
+                inventore labore, unde quae tenetur mollitia repudiandae
+                expedita tempore qui voluptas. Aliquid ab fugit aspernatur odio,
+                maxime veniam unde voluptatibus ratione fuga! Quidem eligendi
+                facilis magni fuga nobis, numquam cupiditate, similique quae
+                nesciunt dicta porro. Facere autem molestiae alias provident
+                quod eum, ex tenetur sed odit temporibus?
+              </p>
+              <p class="name">/People</p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__speech-bubble">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                asperiores, alias aut magnam est laborum debitis consequatur
+                vero maxime, autem dolores, architecto saepe iste natus. Cum
+                inventore labore, unde quae tenetur mollitia repudiandae
+                expedita tempore qui voluptas. Aliquid ab fugit aspernatur odio,
+                maxime veniam unde voluptatibus ratione fuga! Quidem eligendi
+                facilis magni fuga nobis, numquam cupiditate, similique quae
+                nesciunt dicta porro. Facere autem molestiae alias provident
+                quod eum, ex tenetur sed odit temporibus?
+              </p>
+              <p class="name">/People</p>
+            </div>
+            <img
+              class="testimonial__avatar"
+              src="../image/people1.jpg"
+              alt="People"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h1 class="contact__title">Let's Talk</h1>
+      <h2 class="contact__email">youjincha.dev@gmail.com</h2>
+      <div class="contact__links">
+        <a href="https://github.com/youjinDev" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://til-5z8y.additor.io/page/OZX2DZUzPzDw" target="blank">
+          <i class="fas fa-book"></i>
+        </a>
+      </div>
+      <p class="contact__rights">2020 Youjin Cha All rights reserved</p>
+    </section>
+    <!-- Arrow up -->
+    <button class="arrow-up">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </body>
+</html>

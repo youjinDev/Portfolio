@@ -156,7 +156,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("image/homebackground.png") center/cover no-repeat;
+  background: url("../image/homebackground.png") center/cover no-repeat;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
@@ -258,9 +258,10 @@ p {
   color: var(--color-light-grey);
 }
 
-.sungshin {
-  width: 50px;
-  height: 50px;
+.sungshin,
+.seoul {
+  width: 60px;
+  height: 60px;
 }
 
 .school__name {
@@ -289,58 +290,73 @@ p {
 /* Skills */
 
 #skills {
+  width: 100%;
+  padding: 12px;
   background-color: var(--color-light-purple);
 }
 
-.skillset {
-  display: flex;
-  background-color: var(--color-light-grey);
-  color: var(--color-light-white);
-  margin: 20px 0;
-}
-
-.skillset__title {
-  color: var(--color-white);
-}
-
-.skillset__left {
-  flex-basis: 60%;
-  background-color: var(--color-dark-grey);
-  padding: 20px 40px;
-}
-
-.skillset__right {
-  flex-basis: 40%;
-}
-
-.skill__description {
+.skills__container {
   display: flex;
   justify-content: space-between;
+  margin: 32px 0;
 }
 
-.skill__bar {
+.cards__container {
+  width: 300px;
+  height: 400px;
+  margin: 0 12px;
+}
+
+.card {
+  -webkit-box-shadow: 5px 5px 15px -4px #000000;
+  box-shadow: 5px 5px 15px -4px #000000;
+  background-color: var(--color-dark-purple);
   width: 100%;
-  height: 5px;
-  background-color: var(--color-grey);
+  height: 100%;
+  border-radius: 16px;
+  transition: transform 0.7s ease-in-out;
+  transform-style: preserve-3d;
 }
 
-.skill__value {
-  height: 5px;
-  background-color: var(--color-purple);
+.cards__container:hover .card {
+  transform: rotateY(180deg);
 }
 
-.skill {
-  margin-bottom: 30px;
-  margin-top: 0px;
+.card__front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(238, 238, 238);
+  background: radial-gradient(
+    circle,
+    rgba(238, 238, 238, 1) 0%,
+    rgba(74, 20, 140, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
 }
 
-.tools {
-  background-color: var(--color-grey);
-  padding: 20px;
+.card__front i {
+  font-size: 80px;
 }
 
-.etc {
-  padding: 20px;
+.card__back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* text-align: left; */
+  position: absolute;
+  background-color: var(--color-light-white);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+  padding: 10px;
+  background-color: var(--color-white);
 }
 
 /* Work */
@@ -605,8 +621,14 @@ p {
     margin-bottom: 30px;
   }
 
-  .skillset {
+  .skills__container {
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cards__container {
+    margin: 5px auto;
   }
 
   .category__btn {
