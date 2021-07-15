@@ -50,7 +50,7 @@
           alt="Youjin's Profile Photo"
           class="home__avatar"
         />
-        <h1 class="home__title">Wellcome! <br />차유진입니다</h1>
+        <h1 class="home__title">반갑습니다! <br />차유진입니다</h1>
         <h2 class="home__description">☕ ➕ 💻 = 💜</h2>
         <button class="home__contact">Contact Me</button>
       </div>
@@ -58,11 +58,23 @@
     <!-- About me -->
     <section id="about" class="section section__container">
       <h1>About me</h1>
-      <p>
-        프론트엔드와 백엔드, 웹 어플리케이션 전반에 관심이 많습니다. <br />
+      <h3>
+        사용자와의 인터랙션이 많은 <strong>프론트엔드</strong>와 웹 어플리케이션
+        전반에 관심이 많습니다. <br />
         현재는 프론트엔드 신입 개발자로 구직중이며, 최종적으로는 풀스택 개발자를
-        꿈꾸고 있습니다.
-      </p>
+        꿈꾸고 있습니다. <br />
+        공부한 내용을 문서화하여
+        <a
+          class="about__link"
+          href="https://github.com/youjinDev"
+          target="_blank"
+        >
+          <strong>아카이브</strong>
+        </a>
+        하는 것을 좋아하며, 기록물을 공유하는 것도 좋아합니다.
+        <br />
+        개발 외 관심사는 커피와 에일입니다😊
+      </h3>
       <div class="about__majors">
         <div class="major">
           <div class="major__icon">
@@ -74,7 +86,7 @@
             </a>
           </div>
           <h2 class="major__title">W3</h2>
-          <p class="major__description">HTML CSS JavaScript(ES6)</p>
+          <p class="major__description">HTML | CSS | JavaScript</p>
         </div>
 
         <div class="major">
@@ -82,7 +94,7 @@
             <i class="fab fa-vuejs"></i>
           </div>
           <h2 class="major__title">Framework</h2>
-          <p class="major__description">Vue React</p>
+          <p class="major__description">Vue | React</p>
         </div>
 
         <div class="major">
@@ -135,9 +147,13 @@
               </div>
               <div class="card__back">
                 <div class="card__back--section">
-                  <h2>JavaScript</h2>
-                  <h2>TypeScript</h2>
-                  <h2>Java</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>Java</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -151,8 +167,10 @@
               </div>
               <div class="card__back">
                 <div class="card__back--section">
-                  <h2>React</h2>
-                  <h2>Vue</h2>
+                  <ul>
+                    <li>React</li>
+                    <li>Vue</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -166,11 +184,11 @@
               </div>
               <div class="card__back">
                 <div class="card__back--section">
-                  <h2>VS Code</h2>
-                  <h2>Android Studio</h2>
-                  <h2>Eclipse</h2>
-                  <h2>CodeSandBox</h2>
-                  <h2>ProtoPie</h2>
+                  <ul>
+                    <li>VS Code</li>
+                    <li>Android Studio</li>
+                    <li>Eclipse</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -184,10 +202,12 @@
               </div>
               <div class="card__back">
                 <div class="card__back--section">
-                  <h2>Git</h2>
-                  <h2>Github</h2>
-                  <h2>정보처리기사</h2>
-                  <h2>Presentation Skill</h2>
+                  <ul>
+                    <li>git</li>
+                    <li>github</li>
+                    <li>proptopie</li>
+                    <li>정보처리기사</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -201,10 +221,10 @@
       <h3>projects</h3>
       <div class="work__categories">
         <button class="category__btn selected" data-filter="*">
-          All<span class="category__count">3</span>
+          All<span class="category__count">5</span>
         </button>
         <button class="category__btn" data-filter="front">
-          Front-End<span class="category__count">2</span>
+          Front-End<span class="category__count">4</span>
         </button>
         <button class="category__btn" data-filter="back">
           Back-End<span class="category__count">0</span>
@@ -214,6 +234,22 @@
         </button>
       </div>
       <div class="work__projects">
+        <a
+          href="https://github.com/CodingOnTeamBook/Rebook_React_Node"
+          class="project"
+          target="blank"
+          data-category="front"
+        >
+          <img
+            class="project__img"
+            src="./image/Projects/banner_001.png"
+            alt=""
+          />
+          <div class="project__description">
+            <h3>Mobile Application "Mayday"</h3>
+            <span>React | TypeScript : 진행중</span>
+          </div>
+        </a>
         <a
           href="https://github.com/youjinDev/Mayday"
           class="project"
@@ -239,7 +275,7 @@
           />
           <div class="project__description">
             <h3>Game</h3>
-            <span>HTML, CSS, vanilla JS</span>
+            <span>HTML | CSS | Vanilla JS</span>
           </div>
         </a>
         <a
@@ -255,7 +291,19 @@
           />
           <div class="project__description">
             <h3>Interactive Landing Page</h3>
-            <span>HTML, CSS, vanilla JS</span>
+            <span>HTML | CSS | Vanilla JS</span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/youjinDev/Portfolio"
+          class="project"
+          target="blank"
+          data-category="front"
+        >
+          <img class="project__img" src="./image/Projects/포폴_M.png" alt="" />
+          <div class="project__description">
+            <h3>Interactive Portfolio Page</h3>
+            <span>HTML | CSS | Vanilla JS</span>
           </div>
         </a>
       </div>

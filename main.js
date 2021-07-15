@@ -145,7 +145,6 @@ const observerCallback = (entries, observer) => {
         // console.log(index);
         console.log(entry.boundingClientRect.y);
         selectedNavIndex = index - 1;
-        // console.log(`y좌표 양수일때 ${selectedIndex}`);
       }
     }
   });
