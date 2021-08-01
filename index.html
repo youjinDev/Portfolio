@@ -16,7 +16,13 @@
     />
     <link rel="icon" type="img/png" href="./image/icon.png" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="manifest" href="manifest.json" />
     <script src="./main.js" defer></script>
+    <script type="module">
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+      const el = document.createElement('pwa-update');
+      document.body.appendChild(el);
+    </script>   
   </head>
 
   <!-- body -->
