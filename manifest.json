@@ -1,16 +1,14 @@
 {
-  "dir": "ltr",
-  "lang": "en",
+  "dir": "auto",
+  "display": "minimal-ui",
   "name": "portfolio",
   "short_name": "portfolio",
   "scope": "/",
-  "display": "minimal-ui",
-  "start_url": "https://portfolio.loca.lt",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
-  "description": "Portfolio made by youjin",
-  "orientation": "any",
-  "prefer_related_applications": false,
+  "lang": "en",
+  "description": "youjin's porfolio",
+  "theme_color": "none",
+  "background_color": "none",
+  "start_url": "https://youjindev.github.io/Portfolio/",
   "icons": [
     {
       "src": "images/71x71.png",
