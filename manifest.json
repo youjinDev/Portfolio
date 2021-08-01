@@ -5,7 +5,7 @@
   "short_name": "portfolio",
   "scope": "/",
   "display": "minimal-ui",
-  "start_url": "https://90d3d292ca50.ngrok.io",
+  "start_url": "https://portfolio.loca.lt",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "description": "Portfolio made by youjin",
