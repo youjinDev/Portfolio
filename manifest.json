@@ -1,13 +1,16 @@
 {
-  "dir": "auto",
-  "display": "standalone",
-  "name": "Portfolio",
+  "dir": "ltr",
+  "lang": "en",
+  "name": "portfolio",
   "short_name": "portfolio",
   "scope": "/",
-  "lang": "en",
-  "description": "Youjin's PWA portfolio",
-  "theme_color": "none",
-  "background_color": "none",
+  "display": "minimal-ui",
+  "start_url": "https://90d3d292ca50.ngrok.io",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "Portfolio made by youjin",
+  "orientation": "any",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "images/71x71.png",
