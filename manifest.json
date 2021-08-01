@@ -1,0 +1,21 @@
+{
+  "dir": "ltr",
+  "lang": "en",
+  "name": "youjin's portfolio",
+  "short_name": "Youjin's Portfo",
+  "scope": "/Portfolio/",
+  "display": "minimal-ui",
+  "start_url": "/Portfolio/",
+  "background_color": "none",
+  "theme_color": "none",
+  "description": "Portfolio made by youjin",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "images/512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
